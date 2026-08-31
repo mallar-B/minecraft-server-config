@@ -1,0 +1,13 @@
+name = "Instant Portal Nether"
+filename = "instant-nether-portal-1.3.0.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/vRM59tUF/versions/lENQjiob/instant-nether-portal-1.3.0.jar"
+hash-format = "sha512"
+hash = "de1580846004bf34a3de7e04753c458ef8a66f34c1408b0a2536eccb4f08f3329a1bf470a1f3a3d697e44e834baf3a34fa543b0bcc64de1818d405674488b21d"
+
+[update]
+[update.modrinth]
+mod-id = "vRM59tUF"
+version = "lENQjiob"

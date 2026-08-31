@@ -1,0 +1,13 @@
+[Unit]
+Description=Minecraft Idle Suspend
+After=network-online.target minecraft-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/minecraft-idle-suspend.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

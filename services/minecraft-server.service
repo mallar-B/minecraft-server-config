@@ -1,0 +1,33 @@
+[Unit]
+Description=Minecraft Fabric Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+User=minecraft
+Group=minecraft
+
+WorkingDirectory=/srv/minecraft
+
+ExecStart=/usr/bin/java \
+    -Xms2G \
+    -Xmx2560M \
+    -jar fabric-server-mc.26.2-loader.0.19.3-launcher.1.1.1.jar \
+    nogui
+
+Restart=on-failure
+RestartSec=10
+
+# Give Minecraft enough time to save chunks and shut down cleanly.
+TimeoutStopSec=120
+
+# SIGINT behaves like Ctrl+C and allows the Minecraft server's normal
+# shutdown hooks to run if it was not already stopped through RCON.
+KillSignal=SIGINT
+
+SuccessExitStatus=0 130 143
+
+[Install]
+WantedBy=multi-user.target

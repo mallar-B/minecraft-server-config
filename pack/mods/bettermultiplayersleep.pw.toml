@@ -1,0 +1,13 @@
+name = "Better Multiplayer Sleep"
+filename = "BetterMultiplayerSleep 1.1.0 1.21.11+.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/LxB45e67/versions/MmaluIcb/BetterMultiplayerSleep%201.1.0%201.21.11%2B.jar"
+hash-format = "sha512"
+hash = "8f64c51cecae51e4662c522a21027f40d06f4907718b9878f31e59350209aa1114d428e76161b60e2dbc4d63648d4206697d8236c224f1179e0b9e507ce1d035"
+
+[update]
+[update.modrinth]
+mod-id = "LxB45e67"
+version = "MmaluIcb"

@@ -1,0 +1,41 @@
+[Unit]
+Description=Minecraft Server Backup
+Documentation=man:systemd.service(5)
+
+After=network-online.target
+Wants=network-online.target
+
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+
+User=minecraft
+Group=minecraft
+
+WorkingDirectory=/srv/minecraft
+
+EnvironmentFile=/etc/minecraft-backup.conf
+
+# systemd creates /run/minecraft-backup owned by minecraft:minecraft.
+RuntimeDirectory=minecraft-backup
+RuntimeDirectoryMode=0750
+
+ExecStart=/usr/bin/flock \
+    --nonblock \
+    /run/minecraft-backup/backup.lock \
+    /usr/local/bin/minecraft-backup.sh
+
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+UMask=0027
+
+StandardOutput=journal
+StandardError=journal
+
+TimeoutStartSec=6h
+
+[Install]
+WantedBy=multi-user.target

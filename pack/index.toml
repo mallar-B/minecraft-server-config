@@ -1,0 +1,111 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/alternate-current.pw.toml"
+hash = "db49ed5fd52d71b3eb2f65f7385b63c3f3d572e269d774281786eec2522ffc42"
+metafile = true
+
+[[files]]
+file = "mods/bettermultiplayersleep.pw.toml"
+hash = "0d29603ff776063154ca02a9bf89a21d6c7b2905ac44d5fce9c631c1380e263f"
+metafile = true
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "951f09d189fbcf17b4cde0524e9cd1e37da9a3c666fa47606ca61b55ec1c287e"
+metafile = true
+
+[[files]]
+file = "mods/c2me-ocl.pw.toml"
+hash = "36cbba9d17540e959352a2a1d74142650714535466d78172cacc5d58f94f8b34"
+metafile = true
+
+[[files]]
+file = "mods/chunky.pw.toml"
+hash = "8e4512056e448a6f3d1ac179961eb699c15fbe000284e0aee041b5971b417302"
+metafile = true
+
+[[files]]
+file = "mods/clumps.pw.toml"
+hash = "3e4d788583a36e9d145407fadce148f037e5229bff430f7dcd281d4d426c9ee6"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "7b9c5859f27094716924ae732771ef824ce77147f48570c64417422c747923b5"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
+metafile = true
+
+[[files]]
+file = "mods/instant-portal-nether.pw.toml"
+hash = "6f19be63352408e6252c8c6082932d809b4f94fa3ec4ed76327e36c2ad576f01"
+metafile = true
+
+[[files]]
+file = "mods/jei.pw.toml"
+hash = "c58da7126d3117a930572f723d53e0105423cddbe50ba399e6b603d809de6847"
+metafile = true
+
+[[files]]
+file = "mods/journeymap.pw.toml"
+hash = "28e3a9629d074eb1ca1d2c332724693e800e4d62a6af5d84789e02817a4b7690"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "d655305d7933a11ed9c0c8edb57868c053b9c995c121c00b47061cf0e098c92a"
+metafile = true
+
+[[files]]
+file = "mods/noisiumforked.pw.toml"
+hash = "1330268d34fa30998d31f2299eb65054cc419bb935710a50a95518dbeccbb268"
+metafile = true
+
+[[files]]
+file = "mods/ping-wheel.pw.toml"
+hash = "2b0de3a642aa5b31e503589775754c58fe4ee76c2b006b219f236f83af75e4f6"
+metafile = true
+
+[[files]]
+file = "mods/polymer.pw.toml"
+hash = "8e2b677eacda43340a6afe25a66545f4b8208294bfaec2627e036db51126592b"
+metafile = true
+
+[[files]]
+file = "mods/safeserver.pw.toml"
+hash = "4eddfe5bed736c01aa0187e90b4a16720be2c2876847d246ea4d61edb8cd4601"
+metafile = true
+
+[[files]]
+file = "mods/scalablelux.pw.toml"
+hash = "3392508587c2cc0bf99ba82fcb02936d0d8d636537237d6aa12ae30cb03c4522"
+metafile = true
+
+[[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "e8e263c9e5b45ef826911470c4b07405012d8f43f77214f59e56690f7731e299"
+metafile = true
+
+[[files]]
+file = "mods/skinrestorer.pw.toml"
+hash = "e537c08c48d1cb4bfad7ae6a1bce469301866abcb50c1f5f4eb6fea36455d432"
+metafile = true
+
+[[files]]
+file = "mods/spark.pw.toml"
+hash = "c7b6e4a7666e9e64a70df0b550db2e25f7150d4c1c2c2e79e81dfbc036ce3a25"
+metafile = true
+
+[[files]]
+file = "mods/universal-graves.pw.toml"
+hash = "f969f99ffcf07344c72837e095a9101ccfe75e13903610787ef0c8c22c6c047e"
+metafile = true
+
+[[files]]
+file = "mods/voxy-server-side.pw.toml"
+hash = "179d40d987807121a0c7dbfc5dd385e480e19109737c265b20d9f3c5059a2754"
+metafile = true
