@@ -308,6 +308,7 @@ tar \
     --file="$TEMP_ARCHIVE" \
     --use-compress-program='zstd -5 --threads=0' \
     --directory="$(dirname "$WORLD_DIR")" \
+    --exclude="$(basename "$WORLD_DIR")/vss-lod" \
     "$(basename "$WORLD_DIR")"
 
 [[ -s "$TEMP_ARCHIVE" ]] ||
