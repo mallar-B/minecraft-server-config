@@ -10,6 +10,11 @@ rcon_cmd() {
     "$RCON_BIN" -a "${RCON_HOST}:${RCON_PORT}" -p "$RCON_PASSWORD" "$@"
 }
 
+ssh_connections_active() {
+    # Check for any users logged in on a pseudo-terminal,
+    who | grep -q 'pts/'
+}
+
 players_online() {
     local output
     output=$(rcon_cmd list 2>/dev/null) || return 1
@@ -32,16 +37,22 @@ while true; do
 
     echo "Players online: $players"
 
-    if (( players > 0 )); then
+    if ((players > 0)); then
         idle=0
     else
         idle=$((idle + CHECK_SECONDS))
         echo "Empty for ${idle}/${IDLE_SECONDS} seconds"
     fi
 
-    if (( idle >= IDLE_SECONDS )); then
+    if ((idle >= IDLE_SECONDS)); then
         if systemctl is-active --quiet minecraft-backup.service; then
             echo "Backup is running; suspend postponed."
+            sleep "$CHECK_SECONDS"
+            continue
+        fi
+
+        if ssh_connections_active; then
+            echo "SSH connection active; suspend postponed."
             sleep "$CHECK_SECONDS"
             continue
         fi
@@ -58,7 +69,7 @@ while true; do
 
         # Re-check immediately before suspend.
         players=$(players_online || true)
-        if [[ ! "$players" =~ ^[0-9]+$ ]] || (( players > 0 )); then
+        if [[ ! "$players" =~ ^[0-9]+$ ]] || ((players > 0)); then
             echo "Server is no longer confirmed empty; suspend cancelled."
             idle=0
             sleep "$CHECK_SECONDS"
